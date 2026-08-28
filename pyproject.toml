@@ -1,6 +1,6 @@
 [project]
 name = "svg2png-cli"
-version = "0.1.0"
+version = "0.1.1"
 description = "Convert SVG to PNG from the command line (resvg-py backend — no Cairo/Inkscape needed on Windows)."
 readme = "README.md"
 requires-python = ">=3.9"
