@@ -7,15 +7,26 @@ requires-python = ">=3.9"
 license = "MIT"
 authors = [{ name = "Jefferson Gonçalves", email = "gerson.simao.92@gmail.com" }]
 dependencies = ["resvg-py"]
+keywords = ["svg", "png", "cli", "convert", "resvg"]
 classifiers = [
   "Environment :: Console",
   "Intended Audience :: Developers",
   "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+  "Operating System :: OS Independent",
   "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
 ]
 
 [project.urls]
+Homepage = "https://github.com/jeffersongoncalves/svg2png-cli"
 Repository = "https://github.com/jeffersongoncalves/svg2png-cli"
+Issues = "https://github.com/jeffersongoncalves/svg2png-cli/issues"
+Changelog = "https://github.com/jeffersongoncalves/svg2png-cli/releases"
 
 [project.scripts]
 svg2png = "svg2png_cli.cli:main"
