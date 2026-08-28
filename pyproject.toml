@@ -2,12 +2,24 @@
 name = "svg2png-cli"
 version = "0.1.0"
 description = "Convert SVG to PNG from the command line (resvg-py backend — no Cairo/Inkscape needed on Windows)."
+readme = "README.md"
 requires-python = ">=3.9"
+license = "MIT"
+authors = [{ name = "Jefferson Gonçalves", email = "gerson.simao.92@gmail.com" }]
 dependencies = ["resvg-py"]
+classifiers = [
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+  "Programming Language :: Python :: 3",
+]
+
+[project.urls]
+Repository = "https://github.com/jeffersongoncalves/svg2png-cli"
 
 [project.scripts]
 svg2png = "svg2png_cli.cli:main"
 
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=69.3"]
 build-backend = "setuptools.build_meta"
