@@ -1,5 +1,7 @@
 # svg2png-cli
 
+![svg2png-cli](banners/svg2png-cli.png)
+
 [![PyPI](https://img.shields.io/pypi/v/svg2png-cli)](https://pypi.org/project/svg2png-cli/)
 
 Tiny CLI to convert SVG to PNG. Wraps [resvg-py](https://pypi.org/project/resvg-py/) (pure Rust, no native Cairo/Inkscape dependency — the reason `cairosvg` fails out of the box on Windows).

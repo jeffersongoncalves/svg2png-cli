@@ -1,0 +1,62 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0A0A0B"/>
+      <stop offset="1" stop-color="#18181B"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FBBF24"/>
+      <stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FBBF24" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#FBBF24" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#27272A" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.4"/>
+  <ellipse cx="950" cy="310" rx="410" ry="290" fill="url(#glow)"/>
+
+  <circle cx="84" cy="67" r="4" fill="#FBBF24"/>
+  <text x="102" y="72" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" letter-spacing="2" fill="#A1A1AA">PYTHON CLI</text>
+
+  <text x="80" y="280" font-family="Inter, system-ui, sans-serif" font-size="76" font-weight="800" letter-spacing="-2" fill="#FAFAFA">svg2png-cli</text>
+
+  <text x="80" y="340" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="600" fill="#FBBF24">SVG to PNG, one command</text>
+
+  <text x="80" y="380" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="400" fill="#A1A1AA">Wraps resvg-py — no Cairo, no Inkscape, no DLL hell on Windows.</text>
+  <text x="80" y="404" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="400" fill="#A1A1AA">pip install and go.</text>
+
+  <!-- footer pills -->
+  <rect x="80" y="545" width="130" height="30" rx="15" fill="#18181B" stroke="#27272A"/>
+  <text x="145" y="565" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#A1A1AA" text-anchor="middle">Python 3.9+</text>
+
+  <rect x="222" y="545" width="106" height="30" rx="15" fill="#18181B" stroke="#27272A"/>
+  <text x="275" y="565" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#A1A1AA" text-anchor="middle">resvg-py</text>
+
+  <rect x="340" y="545" width="76" height="30" rx="15" fill="#18181B" stroke="#FBBF24"/>
+  <text x="378" y="565" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#FBBF24" text-anchor="middle">PyPI</text>
+
+  <rect x="428" y="545" width="66" height="30" rx="15" fill="#18181B" stroke="#27272A"/>
+  <text x="461" y="565" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#A1A1AA" text-anchor="middle">MIT</text>
+
+  <text x="1120" y="595" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="500" fill="#52525B" text-anchor="end">@jeffersongoncalves</text>
+
+  <!-- right visual: terminal -->
+  <rect x="680" y="140" width="460" height="370" rx="10" fill="#0A0A0B" stroke="#27272A"/>
+  <rect x="680" y="140" width="460" height="40" rx="10" fill="#18181B"/>
+  <rect x="680" y="170" width="460" height="10" fill="#18181B"/>
+  <circle cx="706" cy="160" r="6" fill="#EF4444"/>
+  <circle cx="726" cy="160" r="6" fill="#F59E0B"/>
+  <circle cx="746" cy="160" r="6" fill="#10B981"/>
+
+  <text x="706" y="222" font-family="ui-monospace, monospace" font-size="15" fill="#52525B">$ <tspan fill="#FBBF24">pip install svg2png-cli</tspan></text>
+  <text x="706" y="270" font-family="ui-monospace, monospace" font-size="15" fill="#52525B">$ <tspan fill="#FBBF24">svg2png banner.svg --width 1200</tspan></text>
+  <text x="706" y="298" font-family="ui-monospace, monospace" font-size="14" fill="#A1A1AA">banner.png (78681 bytes)</text>
+
+  <text x="706" y="346" font-family="ui-monospace, monospace" font-size="15" fill="#52525B">$ <tspan fill="#FAFAFA">_</tspan></text>
+</svg>
