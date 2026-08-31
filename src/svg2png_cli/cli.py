@@ -5,6 +5,23 @@ from pathlib import Path
 import resvg_py
 
 
+def convert(svg: Path, png: Path | None = None, width: int | None = None, height: int | None = None) -> Path:
+    if not svg.exists():
+        raise FileNotFoundError(f"{svg} not found")
+
+    output = png or svg.with_suffix(".png")
+
+    kwargs = {"svg_path": str(svg)}
+    if width:
+        kwargs["width"] = width
+    if height:
+        kwargs["height"] = height
+
+    data = resvg_py.svg_to_bytes(**kwargs)
+    output.write_bytes(bytes(data))
+    return output
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(prog="svg2png", description="Convert an SVG file to PNG.")
     parser.add_argument("svg", type=Path, help="Path to the source .svg file")
@@ -13,19 +30,11 @@ def main() -> None:
     parser.add_argument("--height", type=int, help="Output height in px (default: SVG's own size)")
     args = parser.parse_args()
 
-    if not args.svg.exists():
-        sys.exit(f"error: {args.svg} not found")
+    try:
+        output = convert(args.svg, args.png, args.width, args.height)
+    except FileNotFoundError as e:
+        sys.exit(f"error: {e}")
 
-    output = args.png or args.svg.with_suffix(".png")
-
-    kwargs = {"svg_path": str(args.svg)}
-    if args.width:
-        kwargs["width"] = args.width
-    if args.height:
-        kwargs["height"] = args.height
-
-    data = resvg_py.svg_to_bytes(**kwargs)
-    output.write_bytes(bytes(data))
     print(f"{output} ({output.stat().st_size} bytes)")
 
 
