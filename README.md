@@ -28,7 +28,7 @@ Or straight from GitHub / editable mode:
 pip install git+https://github.com/jeffersongoncalves/svg2png-cli.git
 ```
 
-Requires Python 3.9+.
+Requires Python 3.10+.
 
 ## Usage
 
